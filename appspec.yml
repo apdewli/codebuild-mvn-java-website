@@ -3,3 +3,14 @@ os: linux
 files:
   - source: ./ROOT.war
     destination: /var/lib/tomcat8/webapps/  
+
+hooks:
+  BeforeInstall:
+    - location: scripts/setenv.sh
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop.sh
+      runas: root
+  ApplicationStart:
+    - location: deploy_scripts/start.sh
+runas: root
