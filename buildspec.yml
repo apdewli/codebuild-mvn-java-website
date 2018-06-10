@@ -9,5 +9,5 @@ artifacts:
   files:
     - target/ROOT.war
     - appspec.yml
-    - scripts/*
+    - scripts
   discard-paths: yes
