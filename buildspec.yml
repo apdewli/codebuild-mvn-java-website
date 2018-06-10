@@ -9,8 +9,5 @@ artifacts:
   files:
     - target/ROOT.war
     - appspec.yml
-  scripts
-    --start.sh
-    --setenv.sh
-    --stop.sh
-  discard-paths: yes
+    - scripts/*
+   discard-paths: no
